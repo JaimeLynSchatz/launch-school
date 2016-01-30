@@ -56,3 +56,15 @@ my_array[0] == "I"
 {:dog => 'barks', :cat => 'meows'}[]:cat] # returns 'meows'
 
 
+# Expressions and Returns
+
+# puts vs return
+
+puts 'stuff' # prints 'stuff' to stdout, returns nil
+
+a = puts "stuff"
+puts a  # prints to the screen what a returns. It returns nil, so you get nil
+
+
+
+
