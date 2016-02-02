@@ -12,3 +12,20 @@ until (false)
   # do something you want to do forever
 end
 
+# and there are iterators like object.each
+array.each |temp_var_name| do
+    #something to the variable
+    #something else
+end
+
+# Recursion
+
+def doubler(start)
+    puts start
+    if start < 10
+        doubler(start * 2)
+    end
+end
+
+doubler(2)
+
