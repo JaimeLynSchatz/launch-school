@@ -104,8 +104,49 @@ a.each_index { |i| puts "This is index #{i}"}
 
 # array.sort returns a sorted array
 
+# array.product([])
+
+[1, 2, 3].product([4, 5])
+[[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
+
+# each vs map
+a = [1, 2, 3]
+a.each { |e| puts e }
+
+# Outputs
+# 1
+# 2
+# 3
+# => [1, 2, 3]
+
+a = [1, 2, 3]
+a.each { |e| puts e + 2 }
+
+# Outputs
+# 3
+# 4
+# 5
+# => [1, 2, 3]
+
+a = [1, 2, 3]
+a.each
+# returns an Enumerator
 
 
+# map
+# Like each, works on each element
+# unlike each, creates and returns a new array
+# that contains the return results of whatever your 
+# function does
 
+a = [1, 2, 3]
+a.map { |x| x**2 }
+# => [1, 4, 9]
 
+a = [1, 2, 3]
+a.map { |x| puts x**2 }
+=> [nil, nil, nil]
 
+a = [1, 2, 3]
+a.map
+# returns an Enumerator
