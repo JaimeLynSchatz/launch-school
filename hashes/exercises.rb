@@ -40,3 +40,40 @@ def find_in_hash(h, value)
 end
 
 p find_in_hash(my_hash, "Star Wars")
+
+
+# Exercise 6
+words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live', 
+         'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
+         'flow', 'neon']
+
+anagrams = {}
+words.each do |word|
+  letters = word.split('').sort.join
+  if anagrams.has_key?(letters)
+    anagrams[letters].push(word)
+  else
+    anagrams[letters] = [word]
+  end
+end
+
+anagrams.each do |k, v|
+  puts "-------"
+  p v
+end
+
+
+# Exercise 7
+x = "hi there"
+my_hash = {x: "some value"}
+# uses a symbol for the key, must use a string symbol
+my_hash = { x => "some value"}
+# uses the traditional syntax, x can be any type
+
+
+# Exercise 8
+# NoMethodError: undefined method 'keys' for Array
+# tried something like array.keys, as if it was a method??
+# but there is no method called keys for Array objects
+
+
