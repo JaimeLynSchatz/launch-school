@@ -37,3 +37,19 @@ end
 File.readlines("simple_file.txt").each_with_index do |line, line_num|
   puts "#{line_num}: #{line}"
 end
+
+File.superclass
+# => IO
+# stdout, stderr, stdin
+
+# Special Ruby File work classes
+File
+Dir
+Pathname # may need to be required
+
+pn = Pathname.new(f)
+pn.extname
+# => .txt  this is quite cool!
+# same as File::extname
+
+
