@@ -5,8 +5,12 @@ contact_data = [["joe@email.com", "123 Main st.", "555-123-4567"],
 
 contacts = {"Joe Smith" => {}, "Sally Johnson" => {}} 
 
-contacts["Joe Smith"] = {email: contact_data[0][0], address: contact_data[0][1], phone: contact_data[0][2]}
-contacts["Sally Johnson"] = {email: contact_data[1][0], address: contact_data[1][1], phone: contact_data[1][2]}
+contacts.each_with_index do |contact, i|
+
+contacts[contact] = {email: contact_data[i][0], address: contact_data[i][1], phone: contact_data[i][2]}
+#contacts["Sally Johnson"] = {email: contact_data[1][0], address: contact_data[1][1], phone: contact_data[1][2]}
+
+end
 
 p contacts
 
